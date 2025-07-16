@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col items-center">
-        <p class="text-[#FDCA2F] text-[20px] font-semibold">{{ subtitle }}</p>
-        <h2 class="text-[#1E046C] text-[40px] font-bold">{{ title }}</h2>
-        <p class="text-[20px] font-semibold">{{ description }}</p>
+        <p :class="`text-[${subtitleColor}] text-[20px] font-semibold`">{{ subtitle }}</p>
+        <h2 :class="`text-[${titleColor}] text-[40px] font-bold`">{{ title }}</h2>
+        <p :class="`text-[${descriptionColor}] text-[20px] font-semibold`">{{ description }}</p>
     </div>
 </template>
 
@@ -19,6 +19,18 @@ defineProps({
     description: {
         type: String,
         default: ''
+    },
+    subtitleColor: {
+        type: String,
+        default: '#FDCA2F'
+    },
+    titleColor: {
+        type: String,
+        default: '#1E046C'
+    },
+    descriptionColor: {
+        type: String,
+        default: '#000000' // Default warna hitam untuk deskripsi
     }
 });
 </script>
