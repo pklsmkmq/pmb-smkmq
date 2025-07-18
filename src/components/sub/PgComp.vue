@@ -7,7 +7,7 @@
             <h3 class="text-[40px] font-semibold leading-12 transition-all duration-300">
                 {{ title }}
             </h3>
-            <p class="text-[20px] font-medium transition-all duration-300">
+            <p class="text-[18px] font-medium transition-all duration-300">
                 {{ description }}
             </p>
         </div>

@@ -1,13 +1,13 @@
 <template>
-    <div class="mt-10">
+    <div class="mt-10 mx-10" id="program">
         <JudulComp title="Membangun Masa Depan Lewat Program Terpadu" subtitle="Program Unggulan SMK MadinatulQur’an"
             description="Sekolah kejuruan modern yang Islami dan berstandar internasional" />
-        <div class="flex justify-between gap-5 mx-5 my-10">
+        <div class="flex justify-between gap-5 my-10">
             <transition enter-active-class="transition duration-500 ease-in-out"
                 enter-from-class="opacity-0 translate-y-5" enter-to-class="opacity-100 translate-y-0"
                 leave-active-class="transition duration-500 ease-in-out" leave-from-class="opacity-100 translate-y-0"
                 leave-to-class="opacity-0 -translate-y-5" mode="out-in" class="w-[50%]">
-                <div v-if="filteredPrograms.length" :key="filteredPrograms[0].program">
+                <div v-if="filteredPrograms.length" :key="filteredPrograms[0].title">
                     <GambarComp v-bind="filteredPrograms[0]" />
                 </div>
             </transition>
@@ -45,6 +45,7 @@ import PgComp from './sub/PgComp.vue';
 import GambarComp from './sub/GambarComp.vue';
 const galleryData = [
     {
+        title: "English Discovery",
         program: "English Discovery",
         gambar1: "gambar1.jpg",
         gambar2: "gambar2.jpg",
@@ -54,6 +55,7 @@ const galleryData = [
         gambar6: "gambar6.png",
     },
     {
+        title: "Program Internasional",
         program: "Program Internasional",
         gambar1: "gambar1.jpg",
         gambar2: "gambar1.jpg",
@@ -63,6 +65,7 @@ const galleryData = [
         gambar6: "gambar1.jpg",
     },
     {
+        title: "Tahfidz Camp",
         program: "Tahfidz Camp",
         gambar1: "gambar2.jpg",
         gambar2: "gambar2.jpg",
@@ -72,6 +75,7 @@ const galleryData = [
         gambar6: "gambar2.jpg",
     },
     {
+        title: "Project Base Learning",
         program: "Project Base Learning",
         gambar1: "gambar3.jpg",
         gambar2: "gambar3.jpg",
@@ -81,6 +85,7 @@ const galleryData = [
         gambar6: "gambar3.jpg",
     },
     {
+        title: "Entrepreneurship",
         program: "Entrepreneurship",
         gambar1: "gambar4.jpg",
         gambar2: "gambar4.jpg",

@@ -22,7 +22,7 @@ defineProps({
     },
     subtitleColor: {
         type: String,
-        default: '#FDCA2F'
+        default: '#FECB2F'
     },
     titleColor: {
         type: String,
