@@ -5,9 +5,27 @@
   <PartnerComp />
   <AlumniComp />
   <PrestasiComp />
+  <BiayaComp />
+  <ContactComp map-description="Temukan kami di pusat kota." :social-media="[
+    { name: 'Facebook', url: 'https://www.facebook.com/smkmadinatulquran', icon: 'fab fa-facebook' },
+    { name: 'Instagtam', url: 'https://www.instagram.com/smkmadinatulquran/', icon: 'fab fa-instagram' },
+    { name: 'Youtube', url: 'https://www.youtube.com/channel/UCLQ2_4V-t11pUG0pATDXK6g', icon: 'fab fa-youtube' },
+    { name: 'Tiktok', url: 'https://www.tiktok.com/@smk.madinatulquran', icon: 'fab fa-tiktok                                               ' },
+  ]" whatsapp-number1="081533330457" whatsapp-label1="CS PMB" whatsapp-number2="08126900457" whatsapp-label2="Hotline"
+    card-bg-color="#FCE7F3" title-color="#9D174D" text-color="#881337" social-icon-bg="#E11D48"
+    social-icon-color="#FCE7F3" whatsapp-button-bg="#FB7185" whatsapp-button-text="#FFFFFF" />
+  <div class="text-center py-4 bg-[#1E046C]">
+    <p class="text-white font-semibold text-base">&copy; IT Corps SMK Madinatulquran 2025</p>
+  </div>
 
-  <p class="hidden text-[#ffffff]"></p>
-  <p class="hidden text-[#FECB2F]"></p>
+  <div class="fixed bottom-2 right-5 z-50">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png"
+      alt="whatsapp" class="h-16 w-16">
+  </div>
+
+  <p class="hidden text-[#ffffff] border-white"></p>
+  <p class="hidden text-[#FECB2F] border-[#FECB2F]"></p>
+  <p class="hidden border-[#cdcfd4]"></p>
 </template>
 
 <script setup>
@@ -17,6 +35,8 @@ import FasilitasComp from '@/components/FasilitasComp.vue';
 import PartnerComp from '@/components/PartnerComp.vue';
 import AlumniComp from '@/components/AlumniComp.vue';
 import PrestasiComp from '@/components/PrestasiComp.vue';
+import BiayaComp from '@/components/BiayaComp.vue';
+import ContactComp from '@/components/ContactComp.vue';
 </script>
 
 <style scoped>
