@@ -26,11 +26,11 @@
                     'Fasilitas & Kegiatan Penunjang Pembelajaran',
                 ],
             }" :registration-fee="{
-                price: 'Rp. 400.000',
+                price: 'Rp. 450.000',
                 priceSuffix: '/Dibayar sekali',
                 description: 'Uang Pendaftaran digunakan untuk tes potensi (minat dan bakat) siswa, serta potensi akademis dan non-akademis.',
             }" :re-registration-fee="{
-                price: 'Rp. 2.000.000',
+                price: 'Rp. 3.500.000',
                 priceSuffix: '/Dibayar Ketika Naik Kelas XI & XII',
                 description: 'Uang Daftar Ulang digunakan untuk English Discovery, pemeliharaan dan perbaikan sarana prasarana',
             }" button-text="Ambil Promo Sekarang!" theme-color="#1E046C" secondary-color="#FDCA2F"
@@ -59,7 +59,7 @@
                         'Termasuk layanan laundry harian untuk pakaian siswa selama di asrama',
                     ],
                 }" :registration-fee="{
-                    price: 'Rp. 400.000',
+                    price: 'Rp. 450.000',
                     priceSuffix: '/Dibayar sekali',
                     description: 'Uang Pendaftaran mencakup tes psikologi, bakat, dan akademis komprehensif untuk penempatan program yang tepat.',
                 }" :re-registration-fee="{
