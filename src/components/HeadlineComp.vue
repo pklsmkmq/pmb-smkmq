@@ -3,7 +3,7 @@
         <NavComp />
 
         <div
-            class="flex flex-col lg:flex-row gap-8 lg:gap-14 items-center justify-center h-[100vh] pt-20 pb-10 px-4 sm:px-10 md:px-20 lg:px-10">
+            class="flex flex-col lg:flex-row gap-8 lg:gap-14 items-center justify-center h-[120vh] lg:h-[100vh] pt-20 pb-10 px-4 sm:px-10 md:px-20 lg:px-10">
 
             <div
                 class="mt-8 lg:mt-0 flex flex-col gap-6 sm:gap-8 justify-center text-center lg:text-left max-w-full lg:max-w-[60rem]">

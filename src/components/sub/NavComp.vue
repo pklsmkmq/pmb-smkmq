@@ -1,11 +1,11 @@
 <template>
     <div :class="[
-        'fixed py-7 z-50 transition-all duration-300 ease-in-out w-full', // w-full agar selalu membentang
+        'fixed py-5 z-50 transition-all duration-300 ease-in-out w-full', // w-full agar selalu membentang
         { 'bg-[#f5f5f5] shadow-md': scrolled },
         scrolled ? 'px-4 lg:px-10' : 'px-4 lg:px-10' // Padding responsif untuk konsistensi
     ]">
-        <div class="flex items-center justify-between w-full">
-            <div class="flex items-center gap-0 lg:gap-4 flex-shrink-0">
+        <div class="flex justify-between">
+            <div class="flex items-center gap-0 lg:gap-4">
                 <img src="/assets/img/logo_smk_mq.png" alt="Logo SMK MQ" class="w-12 h-12 lg:w-20 lg:h-20">
                 <p
                     :class="['font-bold text-[16px] !w-[50%] lg:text-[40px] ml-3 lg:ml-0 leading-[20px] lg:leading-[40px] tracking-[2px] lg:tracking-[5px]', logoTextColorClass, 'lg:w-[250px] w-auto text-wrap']">
@@ -13,14 +13,14 @@
                 </p>
             </div>
 
-            <div class="lg:hidden">
+            <div class="xl:hidden">
                 <button @click="toggleMobileMenu" :class="['text-3xl focus:outline-none', navLinkTextColorClass]">
                     <i :class="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
                 </button>
             </div>
 
             <div
-                :class="['lg:pt-3 lg:block', mobileMenuOpen ? 'block absolute top-full left-0 w-full bg-[#f5f5f5] lg:bg-transparent py-4 shadow-lg lg:shadow-none' : 'hidden']">
+                :class="['lg:pt-3 xl:block', mobileMenuOpen ? 'block absolute top-full left-0 w-full bg-[#f5f5f5] xl:bg-transparent py-4 shadow-lg xl:shadow-none' : 'hidden']">
                 <ul
                     :class="['flex gap-7 font-semibold text-[19px] items-center', mobileMenuOpen ? 'flex-col text-center' : 'flex-row']">
                     <li v-for="item in navItems" :key="item.id" :class="{ 'w-full': mobileMenuOpen }">
