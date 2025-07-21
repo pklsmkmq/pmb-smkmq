@@ -1,7 +1,8 @@
 <template>
     <div class="relative">
         <!-- Tombol Play -->
-        <img src="/assets/vidio.gif" alt="Play" class="w-50 h-50 cursor-pointer" @click="showModal = true" />
+        <img src="/assets/vidio.gif" alt="Play" class="md:w-50 md:h-50 w-[100px] h-[100px] cursor-pointer"
+            @click="showModal = true" />
 
         <!-- Modal -->
         <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center">
