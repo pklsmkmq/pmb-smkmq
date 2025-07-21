@@ -1,12 +1,12 @@
 <template>
-    <section class="m-10" id="fasilitas">
+    <section class="m-3 lg:m-10" id="fasilitas">
         <JudulComp title="Fasilitas Unggulan Sekolah" subtitle="Apa yang Kami Sediakan"
             description="Mendukung pembelajaran yang nyaman dan modern." />
 
         <!-- Grid Container -->
         <div class="relative">
             <!-- Grid -->
-            <div class="grid grid-cols-4 gap-4 mt-10">
+            <div class="grid lg:grid-cols-4 grid-cols-3 gap-4 mt-10">
                 <div v-for="(item, index) in paginatedItems" :key="index"
                     class="rounded overflow-hidden bg-white flex items-center justify-center text-center">
                     <template v-if="item.type === 'image'">
@@ -16,8 +16,8 @@
                     <template v-else>
                         <div
                             class="h-full w-full bg-white rounded-xl border-1 border-[#092D5C] p-4 flex flex-col justify-center">
-                            <h3 class="font-bold text-lg mb-1">{{ item.title }}</h3>
-                            <p class="text-sm text-gray-600">{{ item.desc }}</p>
+                            <h3 class="font-bold text-[12px] lg:text-lg mb-1">{{ item.title }}</h3>
+                            <p class="text-[10px] lg:text-sm text-gray-600">{{ item.desc }}</p>
                         </div>
                     </template>
                 </div>

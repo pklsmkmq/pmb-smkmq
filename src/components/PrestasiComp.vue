@@ -1,12 +1,13 @@
 <template>
     <div
         class="bg-[url('/assets/img/prestasi.png')] bg-cover bg-no-repeat h-[700px] shadow-[0_8px_20px_-10px_rgba(0,0,0,0.3)]">
-        <div class="mx-10 pt-16">
+        <div class="mx-10 pt-32 lg:pt-16">
             <JudulComp title="Bukti Nyata Kualitas dan Potensi Santri" subtitle="Prestasi Membanggakan"
                 description="Bersaing, menang, dan terus berkembang" titleColor="#ffffff" description-color="#ffffff" />
 
-            <Swiper :modules="[Autoplay]" :slides-per-view="3" :space-between="20" :loop="true"
-                :autoplay="{ delay: 3000, disableOnInteraction: false }" grab-cursor class="partner-swiper mt-16">
+            <Swiper :modules="[Autoplay]" :slides-per-view="slidesPerView" :space-between="20" :loop="true"
+                :autoplay="{ delay: 3000, disableOnInteraction: false }" grab-cursor class="partner-swiper mt-16"
+                :breakpoints="swiperBreakpoints">
                 <SwiperSlide v-for="(prestasi, index) in prestasiData" :key="index"
                     class="flex items-center justify-center">
                     <PrestasiCard :data="prestasi" />
@@ -61,4 +62,25 @@ const prestasiData = [
         gambar: 'gambar6.png'
     }
 ];
+
+const swiperBreakpoints = {
+    // Ketika lebar layar kurang dari 640px (default, atau mobile sangat kecil)
+    // Akan menampilkan 1 slide per tampilan
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 10, // Anda bisa sesuaikan space-between untuk mobile
+    },
+    // Ketika lebar layar minimal 640px (ukuran mobile lebih besar / tablet potrait)
+    // Anda bisa atur ini jika ingin 2 slide pada tablet, atau langsung ke 3
+    640: {
+        slidesPerView: 2, // Misalnya, 2 slide pada tablet potrait
+        spaceBetween: 20,
+    },
+    // Ketika lebar layar minimal 768px (ukuran tablet landscape / laptop mini)
+    // Akan menampilkan 3 slide per tampilan
+    768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+    },
+};
 </script>

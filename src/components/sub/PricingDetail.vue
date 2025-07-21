@@ -1,16 +1,17 @@
 <template>
     <div class="flex items-center text-center mt-10">
         <div :class="`flex-grow border-t border-${textclr}`"></div>
-        <span :class="`px-3 font-semibold text-xl text-${textclr}`">{{ title }}</span>
+        <span :class="`px-3 font-semibold text-lg lg:text-xl text-${textclr}`">{{ title }}</span>
         <div :class="`flex-grow border-t border-${textclr}`"></div>
     </div>
     <div class="flex justify-center gap-4 mt-4 items-end">
-        <p v-if="strikethroughPrice" class="text-2xl line-through text-red-500">
+        <p v-if="strikethroughPrice" class="text-lg lg:text-2xl line-through text-red-500">
             {{ strikethroughPrice }}
         </p>
-        <p :class="`text-5xl font-bold text-${textclr}`">
+        <p :class="`text-2xl lg:text-5xl font-bold text-${textclr}`">
             {{ price }}
-            <span v-if="priceSuffix" :class="['text-base font-light', themeTextColorClass]">{{ priceSuffix }}</span>
+            <span v-if="priceSuffix" :class="['text-sm lg:text-base font-light', themeTextColorClass]">{{ priceSuffix
+                }}</span>
         </p>
     </div>
     <p v-if="description" :class="['text-center my-3', generalTextColorClass]">{{ description }}</p>

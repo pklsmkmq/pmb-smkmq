@@ -1,5 +1,5 @@
 <template>
-    <div :class="[`rounded-2xl border-4 px-4 py-8 shadow-2xl w-[45%] border-[${borderclr}]`, cardBgClass]">
+    <div :class="[`rounded-2xl border-4 px-4 py-8 shadow-2xl w-full lg:w-[45%] border-[${borderclr}]`, cardBgClass]">
         <h3 :class="`font-bold text-3xl text-[${textcolor}]`">{{ title }}</h3>
         <p :class="['mb-5', generalTextColorClass]">{{ description }}</p>
 
@@ -21,7 +21,7 @@
 
         <div class="flex justify-center mt-10">
             <button
-                :class="['px-5 rounded-3xl h-[60px] font-bold w-[90%] text-2xl transition-all duration-300 ease-in-out shadow-md hover:shadow-lg scale-100 hover:scale-105 cursor-pointer', buttonClasses]">
+                :class="['px-5 rounded-3xl h-[60px] font-bold w-[90%] text-xl lg:text-2xl transition-all duration-300 ease-in-out shadow-md hover:shadow-lg scale-100 hover:scale-105 cursor-pointer', buttonClasses]">
                 {{ buttonText }}
             </button>
         </div>

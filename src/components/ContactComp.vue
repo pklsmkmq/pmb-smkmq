@@ -1,6 +1,6 @@
 <template>
     <section class="mt-10 bg-[#1E046C] border-t-[15px] border-t-[#FECB2F]" id="contact">
-        <div class="mx-10 py-10">
+        <div class="mx-3 lg:mx-10 py-10">
             <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="col-span-1 md:col-span-2 lg:col-span-2 rounded-2xl shadow-xl overflow-hidden">
                     <h3 class="text-3xl font-bold p-6 text-white">Temukan Kami</h3>

@@ -1,9 +1,9 @@
 <template>
-    <div class="m-10" id="biaya">
+    <div class="m-3 lg:m-10" id="biaya">
         <JudulComp title="Pendidikan Berkualitas, Biaya Bernilai Ibadah" subtitle="Biaya Pendidikan"
             description="Jelas sejak awal, sesuai dengan kualitas yang diberikan." />
 
-        <div class="mt-10 flex justify-center gap-10 flex-wrap">
+        <div class="mt-10 flex lg:flex-row flex-col justify-center gap-10 flex-wrap">
             <PricingCard title="Fullday" description="Belajar Agama & IT tapi tetep deket keluarga" :admission-fee="{
                 price: 'Rp. 8.500.000',
                 strikethroughPrice: 'Rp. 10.000.000',

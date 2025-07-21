@@ -1,19 +1,19 @@
 <template>
-    <div class="mt-10 mx-10" id="program">
+    <div class="mt-10 mx-3 lg:mx-10" id="program">
         <JudulComp title="Membangun Masa Depan Lewat Program Terpadu" subtitle="Program Unggulan SMK MadinatulQur’an"
             description="Sekolah kejuruan modern yang Islami dan berstandar internasional" />
-        <div class="flex justify-between gap-5 my-10">
+        <div class="flex lg:flex-row flex-col justify-between gap-5 my-10">
             <transition enter-active-class="transition duration-500 ease-in-out"
                 enter-from-class="opacity-0 translate-y-5" enter-to-class="opacity-100 translate-y-0"
                 leave-active-class="transition duration-500 ease-in-out" leave-from-class="opacity-100 translate-y-0"
-                leave-to-class="opacity-0 -translate-y-5" mode="out-in" class="w-[50%]">
+                leave-to-class="opacity-0 -translate-y-5" mode="out-in" class="w-full lg:w-[50%]">
                 <div v-if="filteredPrograms.length" :key="filteredPrograms[0].title">
                     <GambarComp v-bind="filteredPrograms[0]" />
                 </div>
             </transition>
 
 
-            <div class="w-[50%] flex flex-col items-end gap-5">
+            <div class="w-full lg:w-[50%] flex flex-col items-end gap-5">
                 <PgComp @click="setProgram('English Discovery')" title="English Discovery"
                     description="English Discovery melatih siswa berkomunikasi dalam bahasa Inggris untuk dunia global."
                     :active="programData === 'English Discovery'" />
