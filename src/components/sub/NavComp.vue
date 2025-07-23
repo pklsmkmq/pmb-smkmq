@@ -32,7 +32,7 @@
                         </a>
                     </li>
                     <li :class="{ 'w-full': mobileMenuOpen }">
-                        <button
+                        <button @click="gotoPPDB"
                             :class="['px-5 rounded-3xl h-[40px] transition-all duration-300 ease-in-out ring-2 shadow-md hover:shadow-lg scale-100 hover:scale-105 cursor-pointer w-full lg:w-auto mt-4 lg:mt-0', buttonClasses]">
                             Masuk
                         </button>
@@ -107,6 +107,10 @@ const buttonClasses = computed(() => [
     props.buttonBgColor.startsWith('#') ? `ring-[${props.buttonBgColor}]` : `ring-${props.buttonBgColor}`,
     props.buttonHoverBgColor.startsWith('#') ? `hover:ring-[${props.buttonHoverBgColor}]` : `hover:ring-${props.buttonHoverBgColor}`,
 ]);
+
+const gotoPPDB = () => {
+    window.location.href = 'https://ppdb.smkmadinatulquran.sch.id/login';
+};
 
 // Fungsi untuk toggle menu mobile
 const toggleMobileMenu = () => {
