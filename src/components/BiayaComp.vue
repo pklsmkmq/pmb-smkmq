@@ -3,7 +3,7 @@
         <JudulComp title="Pendidikan Berkualitas, Biaya Bernilai Ibadah" subtitle="Biaya Pendidikan"
             description="Jelas sejak awal, sesuai dengan kualitas yang diberikan." />
 
-        <div class="mt-10 flex lg:flex-row flex-col justify-center gap-10 flex-wrap">
+        <div class="mt-10 flex lg:flex-row flex-col justify-center gap-10">
             <PricingCard title="Fullday" description="Belajar Agama & IT tapi tetep deket keluarga" :admission-fee="{
                 price: 'Rp. 8.500.000',
                 strikethroughPrice: 'Rp. 10.000.000',
@@ -34,7 +34,7 @@
                 priceSuffix: '/Dibayar Ketika Naik Kelas XI & XII',
                 description: 'Uang Daftar Ulang digunakan untuk English Discovery, pemeliharaan dan perbaikan sarana prasarana',
             }" button-text="Ambil Promo Sekarang!" theme-color="#1E046C" secondary-color="#FDCA2F"
-                card-background-color="gray-200" card-border-color="gray-300" text-color="gray-700" />
+                card-background-color="#E5E7EB" card-border-color="#D1D5DB" text-color="#374151" />
 
             <PricingCard title="Boarding" textcolor="#ffffff" borderclr="#FECB2F"
                 description="Pendidikan intensif dengan asrama dan fasilitas lengkap" :admission-fee="{

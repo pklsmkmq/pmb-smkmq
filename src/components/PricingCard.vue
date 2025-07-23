@@ -1,5 +1,6 @@
 <template>
-    <div :class="[`rounded-2xl border-4 px-4 py-8 shadow-2xl w-full lg:w-[45%] border-[${borderclr}]`, cardBgClass]">
+    <div :class="`rounded-2xl border-4 px-4 py-8 shadow-2xl w-full lg:w-1/2]`"
+        :style="[{ borderColor: borderclr }, { backgroundColor: cardBgClass }]">
         <h3 :class="`font-bold text-3xl text-[${textcolor}]`">{{ title }}</h3>
         <p :class="['mb-5', generalTextColorClass]">{{ description }}</p>
 
@@ -98,9 +99,9 @@ const props = defineProps({
 // Computed properties untuk kelas CSS
 const cardBgClass = computed(() => {
     if (props.cardBackgroundColor.startsWith('#')) {
-        return `bg-[${props.cardBackgroundColor}]`;
+        return `${props.cardBackgroundColor}`;
     }
-    return `bg-${props.cardBackgroundColor}`;
+    return `${props.cardBackgroundColor}`;
 });
 
 // Menggunakan textColor untuk deskripsi kartu dan teks fitur di PricingDetail

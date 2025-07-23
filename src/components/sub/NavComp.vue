@@ -1,14 +1,19 @@
 <template>
     <div :class="[
-        'fixed py-5 z-50 transition-all duration-300 ease-in-out w-full', // w-full agar selalu membentang
-        { 'bg-[#f5f5f5] shadow-md': scrolled },
-        scrolled ? 'px-4 lg:px-10' : 'px-4 lg:px-10' // Padding responsif untuk konsistensi
+        'fixed py-5 z-50 transition-all duration-300 ease-in-out w-full',
+        { 'bg-nav shadow-md': scrolled },
+        'px-4 lg:px-10'
     ]">
         <div class="flex justify-between">
             <div class="flex items-center gap-0 lg:gap-4">
                 <img src="/assets/img/logo_smk_mq.png" alt="Logo SMK MQ" class="w-12 h-12 lg:w-20 lg:h-20">
-                <p
-                    :class="['font-bold text-[16px] !w-[50%] lg:text-[40px] ml-3 lg:ml-0 leading-[20px] lg:leading-[40px] tracking-[2px] lg:tracking-[5px]', logoTextColorClass, 'lg:w-[250px] w-auto text-wrap']">
+                <p :class="[
+                    'font-bold ml-3 lg:ml-0 text-wrap w-50 lg:w-64',
+                    'text-base lg:text-4xl',
+                    'leading-5 lg:leading-10',
+                    'tracking-2px lg:tracking-5px',
+                    logoTextColorClass
+                ]">
                     PMB SMK MADINATULQURAN
                 </p>
             </div>
@@ -19,21 +24,26 @@
                 </button>
             </div>
 
-            <div
-                :class="['lg:pt-3 xl:block', mobileMenuOpen ? 'block absolute top-full left-0 w-full bg-[#f5f5f5] xl:bg-transparent py-4 shadow-lg xl:shadow-none' : 'hidden']">
-                <ul
-                    :class="['flex gap-7 font-semibold text-[19px] items-center', mobileMenuOpen ? 'flex-col text-center' : 'flex-row']">
+            <div :class="[
+                'lg:pt-3 xl:block',
+                mobileMenuOpen ? 'block absolute top-full left-0 w-full bg-nav xl:bg-transparent py-4 shadow-lg xl:shadow-none' : 'hidden'
+            ]">
+                <ul :class="[
+                    'flex gap-7 font-semibold items-center text-lg',
+                    mobileMenuOpen ? 'flex-col text-center' : 'flex-row'
+                ]">
                     <li v-for="item in navItems" :key="item.id" :class="{ 'w-full': mobileMenuOpen }">
-                        <a :href="item.href" @click="closeMobileMenu" class="relative group py-2 block"
+                        <a :href="item.href" @click="closeMobileMenu" class="relative group py-2 block underline-hover"
                             :class="navLinkTextColorClass">
                             {{ item.text }}
-                            <span
-                                :class="['absolute left-0 bottom-0 h-[2px] w-0 transition-all duration-300 group-hover:w-full', navLinkUnderlineColorClass]"></span>
                         </a>
                     </li>
                     <li :class="{ 'w-full': mobileMenuOpen }">
-                        <button @click="gotoPPDB"
-                            :class="['px-5 rounded-3xl h-[40px] transition-all duration-300 ease-in-out ring-2 shadow-md hover:shadow-lg scale-100 hover:scale-105 cursor-pointer w-full lg:w-auto mt-4 lg:mt-0', buttonClasses]">
+                        <button @click="gotoPPDB" :class="[
+                            'px-5 rounded-3xl transition-all duration-300 ease-in-out shadow-md hover:shadow-lg scale-100 hover:scale-105 cursor-pointer w-full lg:w-auto mt-4 lg:mt-0',
+                            'h-40px',
+                            ...buttonClasses
+                        ]">
                             Masuk
                         </button>
                     </li>
@@ -47,7 +57,7 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 
 const scrolled = ref(false);
-const mobileMenuOpen = ref(false); // State untuk mengontrol menu mobile
+const mobileMenuOpen = ref(false);
 
 const navItems = ref([
     { id: 'home', text: 'Home', href: '#home' },
@@ -58,66 +68,42 @@ const navItems = ref([
 ]);
 
 const props = defineProps({
-    logoTextColor: {
-        type: String,
-        default: 'white' // Warna teks logo saat navbar transparan
-    },
-    navLinkColor: {
-        type: String,
-        default: '#1E046C' // Warna teks link navigasi
-    },
-    buttonBgColor: {
-        type: String,
-        default: '#1E046C' // Background tombol
-    },
-    buttonTextColor: {
-        type: String,
-        default: 'white' // Teks tombol
-    },
-    buttonHoverBgColor: {
-        type: String,
-        default: '#FDCA2F' // Background tombol saat hover
-    },
-    buttonHoverTextColor: {
-        type: String,
-        default: 'black' // Teks tombol saat hover
-    },
+    logoTextColor: { type: String, default: 'white' },
+    navLinkColor: { type: String, default: '#1E046C' },
+    buttonBgColor: { type: String, default: '#1E046C' },
+    buttonTextColor: { type: String, default: 'white' },
+    buttonHoverBgColor: { type: String, default: '#FDCA2F' },
+    buttonHoverTextColor: { type: String, default: 'black' },
 });
 
 const logoTextColorClass = computed(() => {
-    if (scrolled.value || mobileMenuOpen.value) { // Jika discroll ATAU menu mobile terbuka
-        return props.navLinkColor.startsWith('#') ? `text-[${props.navLinkColor}]` : `text-${props.navLinkColor}`;
+    if (scrolled.value || mobileMenuOpen.value) {
+        return props.navLinkColor === '#1E046C' ? 'text-navlink' : '';
     }
-    return props.logoTextColor.startsWith('#') ? `text-[${props.logoTextColor}]` : `text-${props.logoTextColor}`;
+    return props.logoTextColor === 'white' ? 'text-logo' : '';
 });
 
 const navLinkTextColorClass = computed(() => {
-    return props.navLinkColor.startsWith('#') ? `text-[${props.navLinkColor}]` : `text-${props.navLinkColor}`;
-});
-
-const navLinkUnderlineColorClass = computed(() => {
-    return props.navLinkColor.startsWith('#') ? `bg-[${props.navLinkColor}]` : `bg-${props.navLinkColor}`;
+    return props.navLinkColor === '#1E046C' ? 'text-navlink' : '';
 });
 
 const buttonClasses = computed(() => [
-    props.buttonBgColor.startsWith('#') ? `bg-[${props.buttonBgColor}]` : `bg-${props.buttonBgColor}`,
-    props.buttonTextColor.startsWith('#') ? `text-[${props.buttonTextColor}]` : `text-${props.buttonTextColor}`,
-    props.buttonHoverBgColor.startsWith('#') ? `hover:bg-[${props.buttonHoverBgColor}]` : `hover:bg-${props.buttonHoverBgColor}`,
-    props.buttonHoverTextColor.startsWith('#') ? `hover:text-[${props.buttonHoverTextColor}]` : `hover:text-${props.buttonHoverTextColor}`,
-    props.buttonBgColor.startsWith('#') ? `ring-[${props.buttonBgColor}]` : `ring-${props.buttonBgColor}`,
-    props.buttonHoverBgColor.startsWith('#') ? `hover:ring-[${props.buttonHoverBgColor}]` : `hover:ring-${props.buttonHoverBgColor}`,
+    props.buttonBgColor === '#1E046C' ? 'bg-button' : '',
+    props.buttonTextColor === 'white' ? 'text-button' : '',
+    props.buttonHoverBgColor === '#FDCA2F' ? 'bg-button-hover' : '',
+    props.buttonHoverTextColor === 'black' ? 'text-button-hover' : '',
+    props.buttonBgColor === '#1E046C' ? 'ring-button' : '',
+    props.buttonHoverBgColor === '#FDCA2F' ? 'ring-button-hover' : '',
 ]);
 
 const gotoPPDB = () => {
     window.location.href = 'https://ppdb.smkmadinatulquran.sch.id/login';
 };
 
-// Fungsi untuk toggle menu mobile
 const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value;
 };
 
-// Fungsi untuk menutup menu mobile (misalnya setelah klik link)
 const closeMobileMenu = () => {
     mobileMenuOpen.value = false;
 };
@@ -136,6 +122,5 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Pastikan Font Awesome sudah terinstal atau di-link di proyek Anda */
-/* Contoh di index.html: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> */
+/* Pastikan Font Awesome sudah terpasang */
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg-[url('/assets/img/prestasi.png')] bg-cover bg-no-repeat h-[700px] shadow-[0_8px_20px_-10px_rgba(0,0,0,0.3)]">
+        class="bg-pres h-700 shadow-custom">
         <div class="mx-10 pt-32 lg:pt-16">
             <JudulComp title="Bukti Nyata Kualitas dan Potensi Santri" subtitle="Prestasi Membanggakan"
                 description="Bersaing, menang, dan terus berkembang" titleColor="#ffffff" description-color="#ffffff" />

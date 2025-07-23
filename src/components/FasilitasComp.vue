@@ -15,9 +15,9 @@
                     </template>
                     <template v-else>
                         <div
-                            class="h-full w-full bg-white rounded-xl border-1 border-[#092D5C] p-4 flex flex-col justify-center">
-                            <h3 class="font-bold text-[12px] lg:text-lg mb-1">{{ item.title }}</h3>
-                            <p class="text-[10px] lg:text-sm text-gray-600">{{ item.desc }}</p>
+                            class="h-full w-full bg-white rounded-xl border-1 border-pgc p-4 flex flex-col justify-center">
+                            <h3 class="font-bold text-sm lg:text-lg mb-1">{{ item.title }}</h3>
+                            <p class="text-xs lg:text-sm text-gray-600">{{ item.desc }}</p>
                         </div>
                     </template>
                 </div>
@@ -25,11 +25,11 @@
 
             <!-- Navigasi -->
             <div class="flex justify-between mt-4">
-                <button class="bg-[#092D5C] text-white px-4 py-2 rounded hover:bg-gray-700 disabled:opacity-40"
+                <button class="bg-pgc text-white px-4 py-2 rounded hover:bg-gray-700 disabled:opacity-40"
                     @click="prevPage" :disabled="currentPage === 0">
                     ← Sebelumnya
                 </button>
-                <button class="bg-[#092D5C] text-white px-4 py-2 rounded hover:bg-gray-700 disabled:opacity-40"
+                <button class="bg-pgc text-white px-4 py-2 rounded hover:bg-gray-700 disabled:opacity-40"
                     @click="nextPage" :disabled="endIndex >= items.length">
                     Selanjutnya →
                 </button>

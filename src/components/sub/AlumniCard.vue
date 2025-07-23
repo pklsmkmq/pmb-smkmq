@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#f5f5f5] p-6 rounded-xl shadow-md h-full flex flex-col justify-between">
+    <div class="bg-nav p-6 rounded-xl shadow-md h-full flex flex-col justify-between">
         <!-- Ulasan -->
         <p class="text-gray-700 italic mb-4">"{{ data.review }}"</p>
         <hr class="my-2" />

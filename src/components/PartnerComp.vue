@@ -1,6 +1,5 @@
 <template>
-    <div
-        class="bg-[url('/assets/img/bg-partner.png')] bg-cover bg-no-repeat h-[400px] shadow-[0_8px_20px_-10px_rgba(0,0,0,0.3)]">
+    <div class="bg-part h-400 shadow-custom">
         <div class="mx-3 lg:mx-10 pt-12">
             <JudulComp title="Partner Akademik" subtitle="Nasional & Internasional"
                 description="Kerja sama strategis dengan institusi pendidikan terbaik di dalam dan luar negeri"

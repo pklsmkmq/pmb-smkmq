@@ -1,0 +1,152 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* === WARNA === */
+.text-navlink {
+    color: #1E046C;
+}
+
+.text-logo {
+    color: white;
+}
+
+.bg-nav {
+    background-color: #f5f5f5;
+}
+
+.bg-button {
+    background-color: #1E046C;
+}
+
+.bg-button-hover:hover {
+    background-color: #FDCA2F;
+}
+
+.text-button {
+    color: white;
+}
+
+.text-button-hover:hover {
+    color: black;
+}
+
+.ring-button {
+    border: 2px solid #1E046C;
+}
+
+.ring-button-hover:hover {
+    border-color: #FDCA2F;
+}
+
+/* === TYPografi & Ukuran === */
+.text-16px {
+    font-size: 16px;
+}
+
+.text-40px {
+    font-size: 40px;
+}
+
+.leading-20px {
+    line-height: 20px;
+}
+
+.leading-40px {
+    line-height: 40px;
+}
+
+.tracking-2px {
+    letter-spacing: 2px;
+}
+
+.tracking-5px {
+    letter-spacing: 5px;
+}
+
+.h-40px {
+    height: 40px;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+/* === Underline Hover === */
+.underline-hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #1E046C;
+    transition: width 0.3s;
+}
+
+.group:hover .underline-hover::after {
+    width: 100%;
+}
+
+.h-120vh {
+    min-height: 120vh;
+}
+
+.bg-headline {
+    background: url('/assets/img/bg.png') no-repeat center;
+    background-size: cover;
+}
+
+.w-60-rem {
+    max-width: 60rem;
+}
+
+.bg-second {
+    background: #FDCA2F;
+}
+
+.ring-hd {
+    --tw-ring-color: #1E046C;
+}
+
+.border-pgc {
+    border-color: #092D5C;
+}
+
+.bg-pgc {
+    background: #092D5C;
+}
+
+.text-pgc {
+    color: #092D5C;
+}
+
+.text-xs {
+    font-size: 10px;
+}
+
+.bg-part {
+    background: url('/assets/img/bg-partner.png') no-repeat;
+    background-size: cover;
+}
+
+.shadow-custom {
+    box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.3);
+}
+
+.h-400 {
+    height: 400px;
+}
+
+.h-700 {
+    height: 700px;
+}
+
+.h-350 {
+    height: 350px;
+}
+
+.bg-pres {
+    background: url('/assets/img/prestasi.png') no-repeat;
+    background-size: cover;
+}

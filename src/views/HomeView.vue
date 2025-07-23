@@ -18,9 +18,9 @@
     <p class="text-white font-semibold text-base">&copy; IT Corps SMK Madinatulquran 2025</p>
   </div>
 
-  <div class="fixed bottom-2 right-5 z-50">
+  <div class="fixed bottom-2 right-5 z-50" @click="wa">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/640px-WhatsApp.svg.png"
-      alt="whatsapp" class="h-16 w-16">
+      alt="whatsapp" class="h-16 w-16 cursor-pointer">
   </div>
 
   <p class="hidden text-[#ffffff] border-white"></p>
@@ -37,6 +37,10 @@ import AlumniComp from '@/components/AlumniComp.vue';
 import PrestasiComp from '@/components/PrestasiComp.vue';
 import BiayaComp from '@/components/BiayaComp.vue';
 import ContactComp from '@/components/ContactComp.vue';
+
+const wa = () => {
+  window.location.href = "https://wa.me/6281533330457"
+}
 </script>
 
 <style scoped>
