@@ -23,9 +23,10 @@
       alt="whatsapp" class="h-16 w-16 cursor-pointer">
   </div>
 
-  <p class="hidden text-[#ffffff] border-white"></p>
-  <p class="hidden text-[#FECB2F] border-[#FECB2F]"></p>
-  <p class="hidden border-[#cdcfd4]"></p>
+  <p class="hidden text-[#ffffff] border-white h-96"></p>
+  <p class="hidden text-[#FECB2F] border-[#FECB2F] h-80"></p>
+  <p class="hidden border-[#cdcfd4] h-32"></p>
+  <p class="hidden h-44"></p>
 </template>
 
 <script setup>

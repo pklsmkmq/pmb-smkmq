@@ -1,24 +1,26 @@
 <template>
-    <div :class="`rounded-2xl border-4 px-4 py-8 shadow-2xl w-full lg:w-1/2]`"
+    <div :class="`rounded-2xl border-4 px-4 py-8 shadow-2xl w-full lg:w-1/2] flex flex-col justify-between`"
         :style="[{ borderColor: borderclr }, { backgroundColor: cardBgClass }]">
         <h3 :class="`font-bold text-3xl text-[${textcolor}]`">{{ title }}</h3>
         <p :class="['mb-5', generalTextColorClass]">{{ description }}</p>
 
-        <PricingDetail title="Uang Masuk" :textclr="textColor" :price="admissionFee.price"
-            :strikethrough-price="admissionFee.strikethroughPrice" :description="admissionFee.description"
-            :features="admissionFee.features" :theme-color="themeColor" :text-color="generalTextColorProp" />
+        <div class="h-[90%]">
+            <PricingDetail hkonten="96" title="Uang Masuk" :textclr="textColor" :price="admissionFee.price"
+                :strikethrough-price="admissionFee.strikethroughPrice" :description="admissionFee.description"
+                :features="admissionFee.features" :theme-color="themeColor" :text-color="generalTextColorProp" />
 
-        <PricingDetail title="Uang SPP" :textclr="textColor" :price="sppFee.price" :price-suffix="sppFee.priceSuffix"
-            :description="sppFee.description" :features="sppFee.features" :theme-color="themeColor"
-            :text-color="generalTextColorProp" />
+            <PricingDetail hkonten="80" title="Uang SPP" :textclr="textColor" :price="sppFee.price"
+                :price-suffix="sppFee.priceSuffix" :description="sppFee.description" :features="sppFee.features"
+                :theme-color="themeColor" :text-color="generalTextColorProp" />
 
-        <PricingDetail title="Uang Pendaftaran" :textclr="textColor" :price="registrationFee.price"
-            :price-suffix="registrationFee.priceSuffix" :description="registrationFee.description"
-            :features="registrationFee.features" :theme-color="themeColor" :text-color="generalTextColorProp" />
+            <PricingDetail hkonten="32" title="Uang Pendaftaran" :textclr="textColor" :price="registrationFee.price"
+                :price-suffix="registrationFee.priceSuffix" :description="registrationFee.description"
+                :features="registrationFee.features" :theme-color="themeColor" :text-color="generalTextColorProp" />
 
-        <PricingDetail title="Uang Daftar Ulang" :textclr="textColor" :price="reRegistrationFee.price"
-            :price-suffix="reRegistrationFee.priceSuffix" :description="reRegistrationFee.description"
-            :features="reRegistrationFee.features" :theme-color="themeColor" :text-color="generalTextColorProp" />
+            <PricingDetail hkonten="44" title="Uang Daftar Ulang" :textclr="textColor" :price="reRegistrationFee.price"
+                :price-suffix="reRegistrationFee.priceSuffix" :description="reRegistrationFee.description"
+                :features="reRegistrationFee.features" :theme-color="themeColor" :text-color="generalTextColorProp" />
+        </div>
 
         <div class="flex justify-center mt-10">
             <button

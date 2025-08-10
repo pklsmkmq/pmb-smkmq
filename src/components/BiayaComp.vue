@@ -10,20 +10,19 @@
                 description: 'Pembayaran bisa dicicil 3x',
                 features: [
                     'Seragam Kejuruan, Seragam Batik dan Seragam Olahraga',
-                    'Fasilitas Kesehatan',
-                    'Workshop & Praktik Langsung',
-                    'Sertifikasi Kompetensi Tambahan',
-                    'Fasilitas Belajar Modern',
+                    'Sertifikasi Kompetensi',
+                    'Fasilitas Belajar',
+                    'Sumbangan Pengembangan Sarana Prasarana',
+                    'Modul Ajar'
                 ],
             }" :spp-fee="{
                 price: 'Rp. 1.000.000',
                 priceSuffix: '/bulan',
                 features: [
                     'Makan Siang setiap hari dengan menu sehat dan bergizi',
-                    'Layanan Kesehatan & Keamanan',
                     'Termasuk biaya belajar-mengajar, ujian harian, PTS, PAS, dan evaluasi akademik.',
                     'Pengembangan Karakter & Keislaman',
-                    'Fasilitas & Kegiatan Penunjang Pembelajaran',
+                    'Ekstrakurikuler Wajib (Pramuka & Bela Diri)',
                 ],
             }" :registration-fee="{
                 price: 'Rp. 450.000',
@@ -40,13 +39,15 @@
                 description="Pendidikan intensif dengan asrama dan fasilitas lengkap" :admission-fee="{
                     price: 'Rp. 14.500.000',
                     strikethroughPrice: 'Rp. 18.500.000',
-                    description: 'Pembayaran bisa dicicil 3x',
+                    description: 'Pembayaran bisa dicicil 5x',
                     features: [
                         'Seragam Kejuruan, Seragam Batik dan Seragam Olahraga',
                         'Ranjang, kasur, sprei, bantal, serta tempat baju dan perlengkapan tidur lainnya.',
-                        'Layanan Kesehatan & Konseling 24/7',
-                        'Mentoring Pribadi & Tahfidz Quran',
-                        'Ekstrakurikuler Pilihan (Olahraga, Seni, Bahasa)',
+                        'Bimbingan Tahfidz Quran',
+                        'Sertifikasi Kompetensi',
+                        'Fasilitas Belajar',
+                        'Sumbangan Pengembangan Sarana Prasarana',
+                        'Modul Ajar'
                     ],
                 }" :spp-fee="{
                     price: 'Rp. 2.500.000',
@@ -54,18 +55,19 @@
                     features: [
                         'Makan 3x sehari dengan menu sehat dan bergizi',
                         'Termasuk biaya belajar-mengajar, ujian harian, PTS, PAS, dan evaluasi akademik.',
-                        'Pendampingan Guru & Konselor Profesional',
-                        'Kegiatan Keislaman Intensif',
-                        'Termasuk layanan laundry harian untuk pakaian siswa selama di asrama',
+                        'Kegiatan Keislaman',
+                        'Termasuk layanan laundry harian untuk pakaian Santri',
+                        'Pengembangan Karakter & Keislaman',
+                        'Ekstrakurikuler Wajib (Pramuka & Bela Diri)',
                     ],
                 }" :registration-fee="{
                     price: 'Rp. 450.000',
                     priceSuffix: '/Dibayar sekali',
-                    description: 'Uang Pendaftaran mencakup tes psikologi, bakat, dan akademis komprehensif untuk penempatan program yang tepat.',
+                    description: 'Uang Pendaftaran digunakan untuk tes potensi (minat dan bakat) siswa, serta potensi akademis dan non-akademis.',
                 }" :re-registration-fee="{
                     price: 'Rp. 3.500.000',
                     priceSuffix: '/Dibayar Ketika Naik Kelas XI & XII',
-                    description: 'Uang Daftar Ulang mencakup pembaharuan fasilitas asrama, program pengembangan karakter, dan kegiatan keagamaan tahunan.',
+                    description: 'Uang Daftar Ulang digunakan untuk English Discovery, pemeliharaan dan perbaikan sarana prasarana',
                 }" button-text="Ambil Promo Sekarang!" theme-color="#FDCA2F" secondary-color="#1E046C"
                 card-background-color="#1E046C" card-border-color="#FDCA2F" text-color="white" />
         </div>

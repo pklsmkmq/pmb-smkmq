@@ -30,28 +30,28 @@ import 'swiper/css'
 
 const alumniTop = [
     {
-        name: 'Ahmad Fauzi',
-        instasi: 'Universitas Islam Indonesia (UII)',
+        name: 'Muhammad Hilmi',
+        instasi: 'Universitas Pancasila',
         rating: 5,
-        review: 'Saya merasa bangga menjadi bagian dari sekolah ini. Ilmu dan akhlak saya terbentuk di sini.'
+        review: 'Ilmu IT yang diajarkan sangat relevan, kita belajar hal-hal yang memang dicari di dunia kerja. Di sisi lain, program tahfidz dan pembinaan karakternya membuat kita jadi pribadi yang lebih disiplin dan bertanggung jawab'
     },
     {
-        name: 'Nur Aisyah',
-        instasi: 'Universitas Islam Indonesia (UII)',
-        rating: 4,
-        review: 'Lingkungan belajar yang positif dan mendukung, sangat membantu masa depan saya.'
+        name: 'Rizziq Ibrahim',
+        instasi: 'Astra NTN Driveshaft Indonesia',
+        rating: 5,
+        review: 'Ilmu yang diajarkan sangat diperlukan di tempat kerja'
     },
     {
-        name: 'Budi Santoso',
-        instasi: 'Universitas Islam Indonesia (UII)',
+        name: 'Rayya Disayidan',
+        instasi: 'Universitas Negeri Jakarta',
         rating: 5,
         review: 'Pembelajarannya sangat membekas, terutama pada aspek karakter dan teknologi.'
     },
     {
-        name: 'Siti Rahma',
-        instasi: 'Universitas Islam Indonesia (UII)',
-        rating: 4,
-        review: 'Saya diterima di universitas favorit berkat dasar yang kuat dari sekolah ini.'
+        name: 'Muhammad Faiz Al Ghozy',
+        instasi: 'Yayasan Kesehatan Pertamina',
+        rating: 5,
+        review: 'Pesantren yang cukup bagus, buat saya skill yg saya dapat juga gak kalah sama mahasiswa dari universitas bonafit'
     },
     {
         name: 'Ali Ridho',

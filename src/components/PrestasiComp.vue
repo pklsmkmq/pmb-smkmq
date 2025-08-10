@@ -1,6 +1,5 @@
 <template>
-    <div
-        class="bg-pres h-700 shadow-custom">
+    <div class="bg-pres h-700 shadow-custom">
         <div class="mx-10 pt-32 lg:pt-16">
             <JudulComp title="Bukti Nyata Kualitas dan Potensi Santri" subtitle="Prestasi Membanggakan"
                 description="Bersaing, menang, dan terus berkembang" titleColor="#ffffff" description-color="#ffffff" />
@@ -26,10 +25,10 @@ import 'swiper/css'
 
 const prestasiData = [
     {
-        name: 'Lomba Robotika Nasional',
-        deskripsi: 'Tim kami meraih juara pertama di tingkat nasional.',
-        tanggal: '2023-05-15',
-        gambar: 'gambar1.jpg'
+        name: 'Lomba Website Yogyakarta',
+        deskripsi: 'Tim kami meraih juara 3',
+        tanggal: '2024-05-26',
+        gambar: 'lomba/lomba-1.jpg'
     },
     {
         name: 'Olimpiade Sains Internasional',

@@ -1,24 +1,28 @@
 <template>
-    <div class="flex items-center text-center mt-10">
-        <div :class="`flex-grow border-t border-${textclr}`"></div>
-        <span :class="`px-3 font-semibold text-lg lg:text-xl text-${textclr}`">{{ title }}</span>
-        <div :class="`flex-grow border-t border-${textclr}`"></div>
-    </div>
-    <div class="flex justify-center gap-4 mt-4 items-end">
-        <p v-if="strikethroughPrice" class="text-lg lg:text-2xl line-through text-red-500">
-            {{ strikethroughPrice }}
-        </p>
-        <p :class="`text-2xl lg:text-5xl font-bold text-${textclr}`">
-            {{ price }}
-            <span v-if="priceSuffix" :class="['text-sm lg:text-base font-light', themeTextColorClass]">{{ priceSuffix
-                }}</span>
-        </p>
-    </div>
-    <p v-if="description" :class="['text-center my-3', generalTextColorClass]">{{ description }}</p>
+    <div :class="`md:h-${hkonten} h-${hmobile}`">
+        <div class="flex items-center text-center mt-10">
+            <div :class="`flex-grow border-t border-${textclr}`"></div>
+            <span :class="`px-3 font-semibold text-lg lg:text-xl text-${textclr}`">{{ title }}</span>
+            <div :class="`flex-grow border-t border-${textclr}`"></div>
+        </div>
+        <div class="flex justify-center gap-4 mt-4 items-end">
+            <p v-if="strikethroughPrice" class="text-lg lg:text-2xl line-through text-red-500">
+                {{ strikethroughPrice }}
+            </p>
+            <p :class="`text-2xl lg:text-5xl font-bold text-${textclr}`">
+                {{ price }}
+                <span v-if="priceSuffix" :class="['text-sm lg:text-base font-light', themeTextColorClass]">{{
+                    priceSuffix
+                    }}</span>
+            </p>
+        </div>
+        <p v-if="description" :class="['text-center my-3', generalTextColorClass]">{{ description }}</p>
 
-    <ul v-if="features && features.length" class="space-y-3 mt-5">
-        <FiturList v-for="(feature, index) in features" :key="index" :feature-text="feature" :text-color="textColor" />
-    </ul>
+        <ul v-if="features && features.length" class="space-y-3 mt-5">
+            <FiturList v-for="(feature, index) in features" :key="index" :feature-text="feature"
+                :text-color="textColor" />
+        </ul>
+    </div>
 </template>
 
 <script setup>
@@ -61,6 +65,14 @@ const props = defineProps({
     textColor: {
         type: String,
         default: 'gray-700', // Default general text color
+    },
+    hkonten: {
+        type: Number,
+        default: 96
+    },
+    hmobile: {
+        type: String,
+        default: "auto"
     }
 });
 

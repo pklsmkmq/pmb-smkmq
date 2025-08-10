@@ -14,10 +14,6 @@
 
 
             <div class="w-full lg:w-1/2 flex flex-col items-end gap-5">
-                <PgComp @click="setProgram('English Discovery')" title="English Discovery"
-                    description="English Discovery melatih siswa berkomunikasi dalam bahasa Inggris untuk dunia global."
-                    :active="programData === 'English Discovery'" />
-
                 <PgComp @click="setProgram('Program Internasional')" title="Program Internasional"
                     description="Program Internasional membuka peluang siswa melanjutkan studi/magang ke Jerman, Jepang, & China."
                     :active="programData === 'Program Internasional'" />
@@ -29,6 +25,10 @@
                 <PgComp @click="setProgram('Project Base Learning')" title="Project Base Learning"
                     description="mengajak siswa belajar lewat proyek nyata agar siap menghadapi dunia kerja"
                     :active="programData === 'Project Base Learning'" />
+
+                <PgComp @click="setProgram('English Discovery')" title="English Discovery"
+                    description="English Discovery melatih siswa berkomunikasi dalam bahasa Inggris untuk dunia global."
+                    :active="programData === 'English Discovery'" />
 
                 <PgComp @click="setProgram('Entrepreneurship')" title="Entrepreneurship"
                     description="membentuk siswa yang mandiri, kreatif, dan siap berbisnis"
@@ -45,23 +45,13 @@ import PgComp from './sub/PgComp.vue';
 import GambarComp from './sub/GambarComp.vue';
 const galleryData = [
     {
-        title: "English Discovery",
-        program: "English Discovery",
-        gambar1: "gambar1.jpg",
-        gambar2: "gambar2.jpg",
-        gambar3: "gambar3.jpg",
-        gambar4: "gambar4.jpg",
-        gambar5: "gambar5.jpg",
-        gambar6: "gambar6.png",
-    },
-    {
         title: "Program Internasional",
         program: "Program Internasional",
-        gambar1: "gambar1.jpg",
+        gambar1: "program/int-2.jpg",
         gambar2: "gambar1.jpg",
         gambar3: "gambar1.jpg",
         gambar4: "gambar1.jpg",
-        gambar5: "gambar1.jpg",
+        gambar5: "program/int-1.jpg",
         gambar6: "gambar1.jpg",
     },
     {
@@ -77,17 +67,27 @@ const galleryData = [
     {
         title: "Project Base Learning",
         program: "Project Base Learning",
-        gambar1: "gambar3.jpg",
-        gambar2: "gambar3.jpg",
+        gambar1: "program/pbl-2.png",
+        gambar2: "program/pbl-3.png",
         gambar3: "gambar3.jpg",
         gambar4: "gambar3.jpg",
-        gambar5: "gambar3.jpg",
+        gambar5: "program/pbl-1.png",
         gambar6: "gambar3.jpg",
+    },
+    {
+        title: "English Discovery",
+        program: "English Discovery",
+        gambar1: "program/ed-1.jpg",
+        gambar2: "gambar2.jpg",
+        gambar3: "gambar3.jpg",
+        gambar4: "gambar4.jpg",
+        gambar5: "program/ed-2.jpg",
+        gambar6: "gambar6.png",
     },
     {
         title: "Entrepreneurship",
         program: "Entrepreneurship",
-        gambar1: "gambar4.jpg",
+        gambar1: "program/enter-2.jpg",
         gambar2: "gambar4.jpg",
         gambar3: "gambar4.jpg",
         gambar4: "gambar4.jpg",
@@ -96,7 +96,7 @@ const galleryData = [
     }
 ];
 
-const programData = ref("English Discovery");
+const programData = ref("Program Internasional");
 const setProgram = (pg) => {
     programData.value = pg;
 
