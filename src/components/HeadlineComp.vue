@@ -48,6 +48,7 @@ import NavComp from './sub/NavComp.vue';
 import VidioComp from './sub/VidioComp.vue';
 
 const beasiswa = () => {
-    window.location.href = "https://wa.me/6281533330457?text=Bismillah%2C%20ana%20mau%20bertanya%20seputar%20program%20beasiswa%20yang%20ada%20di%20SMK%20Madinatulquran%20Jonggol%20ini%20apakah%20ada%3F"
+    // window.location.href = "https://wa.me/6281533330457?text=Bismillah%2C%20ana%20mau%20bertanya%20seputar%20program%20beasiswa%20yang%20ada%20di%20SMK%20Madinatulquran%20Jonggol%20ini%20apakah%20ada%3F"
+    window.open('https://wa.me/6285545182776?text=Bismillah%2C%20ana%20mau%20bertanya%20seputar%20program%20beasiswa%20yang%20ada%20di%20SMK%20Madinatulquran%20Jonggol%20ini%20apakah%20ada%3F', '_blank')
 }
 </script>

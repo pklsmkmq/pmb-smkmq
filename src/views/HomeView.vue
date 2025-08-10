@@ -11,7 +11,7 @@
     { name: 'Instagtam', url: 'https://www.instagram.com/smkmadinatulquran/', icon: 'fab fa-instagram' },
     { name: 'Youtube', url: 'https://www.youtube.com/channel/UCLQ2_4V-t11pUG0pATDXK6g', icon: 'fab fa-youtube' },
     { name: 'Tiktok', url: 'https://www.tiktok.com/@smk.madinatulquran', icon: 'fab fa-tiktok                                               ' },
-  ]" whatsapp-number1="081533330457" whatsapp-label1="CS PMB" whatsapp-number2="08126900457" whatsapp-label2="Hotline"
+  ]" whatsapp-number1="085545182776" whatsapp-label1="CS PMB" whatsapp-number2="08126900457" whatsapp-label2="Hotline"
     card-bg-color="#FCE7F3" title-color="#9D174D" text-color="#881337" social-icon-bg="#E11D48"
     social-icon-color="#FCE7F3" whatsapp-button-bg="#FB7185" whatsapp-button-text="#FFFFFF" />
   <div class="text-center py-4 bg-[#1E046C]">
@@ -40,7 +40,8 @@ import BiayaComp from '@/components/BiayaComp.vue';
 import ContactComp from '@/components/ContactComp.vue';
 
 const wa = () => {
-  window.location.href = "https://wa.me/6281533330457"
+  // window.location.href = "https://wa.me/6285545182776"
+  window.open('https://wa.me/6285545182776', '_blank')
 }
 </script>
 
