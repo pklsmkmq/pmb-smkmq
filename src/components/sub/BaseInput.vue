@@ -5,7 +5,7 @@
         </label>
         <input :type="type" :id="id" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)"
             :placeholder="placeholder" :required="required"
-            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#1E046C] focus:border-transparent" />
     </div>
 </template>
 
