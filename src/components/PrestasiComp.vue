@@ -26,39 +26,33 @@ import 'swiper/css'
 const prestasiData = [
     {
         name: 'Lomba Website Yogyakarta',
-        deskripsi: 'Tim kami meraih juara 3',
+        deskripsi: 'Santri kami meraih juara 3',
         tanggal: '2024-05-26',
         gambar: 'lomba/lomba-1.jpg'
     },
     {
-        name: 'Olimpiade Sains Internasional',
-        deskripsi: 'Siswa kami mendapatkan medali perak di olimpiade internasional.',
-        tanggal: '2023-06-20',
-        gambar: 'gambar2.jpg'
+        name: 'Kompetisi Nasional Teknologi Uhamka',
+        deskripsi: 'Alhamdulillah berhasil juara 1 Copywriting',
+        tanggal: '2023-03-20',
+        gambar: 'lomba/lomba-2.jpg'
     },
     {
-        name: 'Festival Seni dan Budaya',
-        deskripsi: 'Pertunjukan seni kami mendapat sambutan hangat dari masyarakat.',
-        tanggal: '2023-07-10',
-        gambar: 'gambar3.jpg'
+        name: 'Netacad Riders Region Indonesia',
+        deskripsi: 'Santri kami Juara 1 atau meraih Piagam Kategori GOLD',
+        tanggal: '2023-04-14',
+        gambar: 'lomba/lomba-3.jpg'
     },
     {
-        name: 'Lomba Robotika Nasional',
-        deskripsi: 'Tim kami meraih juara pertama di tingkat nasional.',
-        tanggal: '2023-05-15',
-        gambar: 'gambar4.jpg'
+        name: 'Netacad Riders Region Indonesia',
+        deskripsi: 'Santri kami meraih Piagam Kategori Silver',
+        tanggal: '2024-03-26',
+        gambar: 'lomba/lomba-4.jpg'
     },
     {
-        name: 'Olimpiade Sains Internasional',
-        deskripsi: 'Siswa kami mendapatkan medali perak di olimpiade internasional.',
-        tanggal: '2023-06-20',
-        gambar: 'gambar5.jpg'
-    },
-    {
-        name: 'Festival Seni dan Budaya',
-        deskripsi: 'Pertunjukan seni kami mendapat sambutan hangat dari masyarakat.',
-        tanggal: '2023-07-10',
-        gambar: 'gambar6.png'
+        name: 'National Itenas Robotic Competition',
+        deskripsi: 'Siswa kami mendapatkan juara 2 dan juara favorit',
+        tanggal: '2022-06-20',
+        gambar: 'lomba/lomba-5.jpg'
     }
 ];
 

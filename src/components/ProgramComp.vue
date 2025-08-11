@@ -47,22 +47,21 @@ const galleryData = [
     {
         title: "Program Internasional",
         program: "Program Internasional",
-        gambar1: "program/int-2.jpg",
-        gambar2: "gambar1.jpg",
-        gambar3: "gambar1.jpg",
-        gambar4: "gambar1.jpg",
+        gambar1: "program/int-3.jpg",
+        gambar2: "program/Ausbildung.png",
+        gambar3: "program/anabuki.png",
         gambar5: "program/int-1.jpg",
-        gambar6: "gambar1.jpg",
+        gambar6: "program/int-2.jpg",
     },
     {
         title: "Tahfidz Camp",
         program: "Tahfidz Camp",
-        gambar1: "gambar2.jpg",
-        gambar2: "gambar2.jpg",
-        gambar3: "gambar2.jpg",
-        gambar4: "gambar2.jpg",
-        gambar5: "gambar2.jpg",
-        gambar6: "gambar2.jpg",
+        gambar1: "program/tahfidz-3.png",
+        gambar2: "program/tahfidz-4.png",
+        gambar3: "program/tahfidz-2.png",
+        gambar4: "program/tahfidz-2.png",
+        gambar5: "program/tahfidz.png",
+        gambar6: "program/tahfidz-2.png",
     },
     {
         title: "Project Base Learning",
@@ -72,7 +71,7 @@ const galleryData = [
         gambar3: "gambar3.jpg",
         gambar4: "gambar3.jpg",
         gambar5: "program/pbl-1.png",
-        gambar6: "gambar3.jpg",
+        gambar6: "program/pbl-4.png",
     },
     {
         title: "English Discovery",
@@ -87,12 +86,11 @@ const galleryData = [
     {
         title: "Entrepreneurship",
         program: "Entrepreneurship",
-        gambar1: "program/enter-2.jpg",
+        gambar1: "program/enter-3.png",
         gambar2: "gambar4.jpg",
-        gambar3: "gambar4.jpg",
-        gambar4: "gambar4.jpg",
-        gambar5: "gambar4.jpg",
-        gambar6: "gambar4.jpg",
+        gambar3: "program/enter-2.jpg",
+        gambar5: "program/enter-5.png",
+        gambar6: "program/enter-4.png",
     }
 ];
 
