@@ -26,9 +26,21 @@
                         </a>
                     </div>
                     <div class="flex items-center justify-between">
-                        <button type="submit"
-                            class="bg-[#1E046C] hover:bg-purple-900 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-200 ease-in-out w-full">
-                            Login
+                        <button :disabled="loading" type="submit"
+                            class="flex items-center justify-center px-4 py-2 rounded-lg text-white bg-[#1E046C] hover:bg-purple-900 disabled:opacity-60 disabled:cursor-not-allowed w-full font-bold tracking-widest">
+                            <template v-if="loading">
+                                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                                    </path>
+                                </svg>
+                            </template>
+                            <template v-else>
+                                Login
+                            </template>
                         </button>
                     </div>
                 </form>
@@ -43,16 +55,61 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import BaseInput from '@/components/sub/BaseInput.vue';
+import { ref } from "vue";
+import axios from "axios";
+import Cookies from "js-cookie";
+import BaseInput from "@/components/sub/BaseInput.vue";
+import Swal from "sweetalert2";
 
 const email = ref('');
 const password = ref('');
-const backgroundImage = ref('/assets/img/login-bg.jpg');
+const loading = ref(false);
 
-const handleLogin = () => {
-    console.log('Email:', email.value);
-    console.log('Password:', password.value);
-    alert('Login berhasil! (Ini hanya simulasi)');
+const handleLogin = async () => {
+    loading.value = true;
+    try {
+        const res = await axios.post(
+            `${import.meta.env.VITE_API_BASE_URL}/login`,
+            {
+                email: email.value,
+                password: password.value
+            }
+        );
+
+        if (res.data.status === "Success") {
+            // Simpan ke localStorage
+            localStorage.setItem("user_name", res.data.user.name);
+            localStorage.setItem("user_email", res.data.user.email);
+            localStorage.setItem("user_phone", res.data.user.phone);
+
+            // Simpan token ke cookies (expired 7 hari)
+            Cookies.set("pmbsmkmq_token", res.data.token, { expires: 7 });
+            // Redirect ke halaman dashboard / login
+            window.location.href = "/dashboard";
+        } else {
+            showError(res.data.message || "Terjadi kesalahan");
+        }
+    } catch (err) {
+        console.error(err);
+        showError("Gagal Login");
+    } finally {
+        loading.value = false;
+    }
 };
+
+const showError = (message) => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Gagal!',
+        text: message,
+        confirmButtonText: 'Coba Lagi',
+        confirmButtonColor: '#d33',
+        customClass: {
+            title: 'text-xl',
+            popup: 'rounded-lg'
+        }
+    });
+};
+
+
 </script>

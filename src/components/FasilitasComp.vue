@@ -43,10 +43,10 @@ import { ref, computed } from 'vue'
 import JudulComp from './sub/JudulComp.vue'
 
 const items = [
-    { type: 'image', src: 'gambar1.jpg' },
-    { type: 'image', src: '/program/pbl-4.png' },
+    { type: 'image', src: 'kelas.jpg' },
+    { type: 'image', src: 'kelas2.jpg' },
     { type: 'info', title: 'Ruang Kelas', desc: 'Ruang kelas full AC' },
-    { type: 'image', src: 'gambar2.jpg' },
+    { type: 'image', src: 'starlink.jpg' },
     { type: 'image', src: '/program/pbl-4.png' },
     { type: 'info', title: 'Akses Internet', desc: 'Sudah menggunakan Starlink' },
     { type: 'image', src: 'gambar1.jpg' },
@@ -58,13 +58,13 @@ const items = [
     { type: 'image', src: '/program/laundry.png' },
     { type: 'image', src: '/program/laundry-2.png' },
     { type: 'info', title: 'Laundry', desc: 'Tidak perlu repot - repot mencuci' },
-    { type: 'image', src: 'gambar6.png' },
-    { type: 'image', src: 'gambar6.png' },
+    { type: 'image', src: 'kantin2.jpg' },
+    { type: 'image', src: 'kantin.jpg' },
     { type: 'info', title: 'Kantin', desc: 'Jajan tidak perlu ribet' },
-    { type: 'image', src: 'gambar1.jpg' },
-    { type: 'image', src: 'gambar1.jpg' },
+    { type: 'image', src: 'lab.jpg' },
+    { type: 'image', src: 'lab2.jpg' },
     { type: 'info', title: 'Lab Praktikum', desc: 'Berbasis LAN School' },
-    { type: 'image', src: '/program/masjid.png' },
+    { type: 'image', src: 'masjid.jpg' },
     { type: 'image', src: '/program/masjid-2.png' },
     { type: 'info', title: 'Masjid', desc: 'Sholat nyaman dan tenang' },
 ]
