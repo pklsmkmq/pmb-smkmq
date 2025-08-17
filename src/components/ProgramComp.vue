@@ -1,7 +1,7 @@
 <template>
     <div class="mt-10 mx-3 lg:mx-10" id="program">
         <JudulComp title="Membangun Masa Depan Lewat Program Terpadu" subtitle="Program Unggulan SMK MadinatulQur’an"
-            description="Sekolah kejuruan modern yang Islami dan berstandar internasional" />
+            description="Kami bekali kamu untuk sukses kuliah dan bekerja, sambil memperdalam keimanan" />
         <div class="flex lg:flex-row flex-col justify-between gap-5 my-10">
             <transition enter-active-class="transition duration-500 ease-in-out"
                 enter-from-class="opacity-0 translate-y-5" enter-to-class="opacity-100 translate-y-0"
