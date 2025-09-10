@@ -69,29 +69,44 @@ const handleLogin = async () => {
     loading.value = true;
     try {
         const res = await axios.post(
-            `${import.meta.env.VITE_API_BASE_URL}/login`,
+            // Ganti dengan URL API login Anda jika berbeda
+            `${import.meta.env.VITE_LOCAL_URL}/auth/login`,
             {
                 email: email.value,
                 password: password.value
             }
         );
 
-        if (res.data.status === "Success") {
-            // Simpan ke localStorage
-            localStorage.setItem("user_name", res.data.user.name);
-            localStorage.setItem("user_email", res.data.user.email);
-            localStorage.setItem("user_phone", res.data.user.phone);
+        // Periksa apakah login berhasil dan ada data user
+        if (res.data.message === "berhasil login" && res.data.data.user) {
+            const userData = res.data.data.user;
+            const pendaftaranStatus = res.data.data.pendaftaranStatus;
 
-            // Simpan token ke cookies (expired 7 hari)
-            Cookies.set("pmbsmkmq_token", res.data.token, { expires: 7 });
-            // Redirect ke halaman dashboard / login
-            window.location.href = "/dashboard";
+            // Simpan data ke localStorage
+            localStorage.setItem("user_name", userData.namaSantri);
+            localStorage.setItem("user_email", userData.email);
+            localStorage.setItem("user_phone", userData.nomorHandphone);
+            localStorage.setItem("user_role", userData.role);
+            // Simpan status pendaftaran untuk digunakan di dashboard santri
+            localStorage.setItem("pendaftaranStatus", JSON.stringify(pendaftaranStatus));
+
+            // Simpan token ke cookies
+            Cookies.set("pmbsmkmq_token", res.data.data.accessToken, { expires: 7 });
+
+            // Arahkan berdasarkan role
+            if (userData.role === 'admin') {
+                window.location.href = "/dashboard";
+            } else {
+                window.location.href = "/santri/home";
+            }
+
         } else {
-            showError(res.data.message || "Terjadi kesalahan");
+            showError(res.data.message || "Email atau password salah");
         }
     } catch (err) {
-        console.error(err);
-        showError("Gagal Login");
+        console.error("Error saat login:", err);
+        const errorMessage = err.response?.data?.message || "Terjadi kesalahan pada server. Silakan coba lagi.";
+        showError(errorMessage);
     } finally {
         loading.value = false;
     }
@@ -100,16 +115,10 @@ const handleLogin = async () => {
 const showError = (message) => {
     Swal.fire({
         icon: 'error',
-        title: 'Gagal!',
+        title: 'Gagal Login!',
         text: message,
         confirmButtonText: 'Coba Lagi',
         confirmButtonColor: '#d33',
-        customClass: {
-            title: 'text-xl',
-            popup: 'rounded-lg'
-        }
     });
 };
-
-
 </script>

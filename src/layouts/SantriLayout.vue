@@ -1,8 +1,7 @@
 <template>
     <div class="flex min-h-screen bg-gray-100">
-        <Sidebar />
+        <SidebarSantri />
         <div class="flex flex-col flex-1 lg:ml-64">
-            <Navbar />
             <main class="p-6">
                 <slot />
             </main>
@@ -11,6 +10,5 @@
 </template>
 
 <script setup>
-import Sidebar from '@/components/ds/Sidebar.vue';
-import Navbar from '@/components/ds/Navbar.vue';
+import SidebarSantri from '@/components/santri/Sidebar.vue';
 </script>

@@ -9,7 +9,6 @@
                 </div>
             </div>
 
-            <!-- Form -->
             <div class="w-full lg:w-1/2 p-8 sm:p-12 md:p-16 flex flex-col justify-center">
                 <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8">
                     Daftar Akun Baru
@@ -37,7 +36,6 @@
                             placeholder="Konfirmasi password Anda" v-model="confirmPassword" required />
                     </div>
 
-                    <!-- Select untuk informasi -->
                     <div class="mb-6">
                         <label for="information" class="block text-gray-700 text-sm font-bold mb-2">
                             Informasi PMB ini didapat dari
@@ -94,7 +92,6 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
-import Cookies from "js-cookie";
 import BaseInput from "@/components/sub/BaseInput.vue";
 import Swal from "sweetalert2";
 
@@ -104,7 +101,6 @@ const phoneNumber = ref("");
 const password = ref("");
 const confirmPassword = ref("");
 const information = ref("teman"); // default teman
-const role = import.meta.env.VITE_ROLE_SANTRI;
 const loading = ref(false);
 
 const showSuccess = (message) => {
@@ -118,6 +114,8 @@ const showSuccess = (message) => {
             title: 'text-xl',
             popup: 'rounded-lg'
         }
+    }).then(() => {
+        window.location.href = "/login";
     });
 };
 
@@ -139,39 +137,31 @@ const handleRegister = async () => {
     loading.value = true;
     if (password.value !== confirmPassword.value) {
         showError("Konfirmasi password tidak cocok!");
+        loading.value = false;
         return;
     }
 
     try {
         const res = await axios.post(
-            `${import.meta.env.VITE_API_BASE_URL}/register`,
+            `${import.meta.env.VITE_LOCAL_URL}/auth/register`,
             {
-                name: fullName.value,
+                namaSantri: fullName.value,
                 email: email.value,
-                phone: phoneNumber.value,
+                nomorHandphone: phoneNumber.value,
                 password: password.value,
-                password_confirmation: confirmPassword.value,
-                role: role,
-                informasi: information.value
+                konfirmasiPassword: confirmPassword.value,
+                infoPendaftaran: information.value
             }
         );
 
-        if (res.data.status === "Success") {
-            // Simpan ke localStorage
-            localStorage.setItem("user_name", res.data.user.name);
-            localStorage.setItem("user_email", res.data.user.email);
-            localStorage.setItem("user_phone", res.data.user.phone);
+        // Jika request berhasil (tidak masuk ke `catch`), langsung tampilkan pesan sukses
+        showSuccess(res.data.message);
 
-            // Simpan token ke cookies (expired 7 hari)
-            Cookies.set("pmbsmkmq_token", res.data.token, { expires: 7 });
-            // Redirect ke halaman dashboard / login
-            window.location.href = "/dashboard";
-        } else {
-            showError(res.data.message || "Terjadi kesalahan");
-        }
     } catch (err) {
+        // Jika terjadi error, tampilkan pesan error dari backend
         console.error(err);
-        showError("Gagal mendaftar!");
+        const errorMessage = err.response?.data?.message || "Gagal mendaftar! Terjadi kesalahan pada server.";
+        showError(errorMessage);
     } finally {
         loading.value = false;
     }
